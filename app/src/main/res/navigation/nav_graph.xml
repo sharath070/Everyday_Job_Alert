@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.sharath070.everydayjobalert.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.sharath070.everydayjobalert.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/jobsFragment"
+        android:name="com.sharath070.everydayjobalert.JobsFragment"
+        android:label="fragment_jobs"
+        tools:layout="@layout/fragment_jobs" />
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.sharath070.everydayjobalert.ExploreFragment"
+        android:label="fragment_explore"
+        tools:layout="@layout/fragment_explore" >
+        <action
+            android:id="@+id/action_exploreFragment_to_exploreCategoryFragment"
+            app:destination="@id/exploreCategoryFragment" />
+        <action
+            android:id="@+id/action_exploreFragment_to_exploreCategoryFragment2"
+            app:destination="@id/exploreCategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exploreCategoryFragment"
+        android:name="com.sharath070.everydayjobalert.ExploreCategoryFragment"
+        android:label="fragment_explore_category"
+        tools:layout="@layout/fragment_explore_category" />
+</navigation>
